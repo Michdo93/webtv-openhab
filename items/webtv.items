@@ -1,0 +1,34 @@
+// Group for all TV stations
+Group gWebTV "WebTV Sender" <screen>
+
+// Control Elements / States
+Player   WebTV_Control  "WebTV Steuerung"   <screen>
+Dimmer   WebTV_Volume   "Lautstärke [%d %%]" <soundvolume>
+Switch   WebTV_Mute     "Stummschaltung"     <soundvolume_mute>
+String   WebTV_Sender   "Aktueller Sender"   <screen>
+String   WebTV_Zap      "Sender zappen"      <screen>
+
+// Channels with stream_uri metadata
+Switch iWebTV_ARD "Das Erste" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/ard.m3u8" }
+Switch iWebTV_ZDF "ZDF" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/zdf.m3u8" }
+Switch iWebTV_ZDFneo "ZDFneo" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/zdfneo.m3u8" }
+Switch iWebTV_ZDFinfo "ZDFinfo" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/zdfinfo.m3u8" }
+Switch iWebTV_Arte "Arte" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/arte.m3u8" }
+Switch iWebTV_3sat "3sat" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/3sat.m3u8" }
+Switch iWebTV_KiKa "KiKa" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/kika.m3u8" }
+Switch iWebTV_Phoenix "Phoenix" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/phoenix.m3u8" }
+Switch iWebTV_Tagesschau24 "Tagesschau24" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/tagesschau24.m3u8" }
+Switch iWebTV_One "ARD One" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/one.m3u8" }
+Switch iWebTV_Alpha "ARD Alpha" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/alpha.m3u8" }
+
+Switch iWebTV_BR "BR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/br.m3u8" }
+Switch iWebTV_HR "HR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/hr.m3u8" }
+Switch iWebTV_MDR "MDR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/mdr.m3u8" }
+Switch iWebTV_NDR "NDR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/ndr.m3u8" }
+Switch iWebTV_RBB "RBB Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/rbb.m3u8" }
+Switch iWebTV_SWR "SWR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/swr.m3u8" }
+Switch iWebTV_WDR "WDR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/wdr.m3u8" }
+
+Switch iWebTV_Welt "WELT" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/welt.m3u8" }
+Switch iWebTV_N24Doku "N24 Doku" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/n24doku.m3u8" }
+Switch iWebTV_ServusTV "ServusTV" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/servustv.m3u8" }

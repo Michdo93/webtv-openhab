@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebTV Controller</title>
+    <style>
+        :root {
+            --bg-color: #121212;
+            --card-bg: #1e1e1e;
+            --accent-color: #0088ff;
+            --text-color: #ffffff;
+            --text-dim: #aaaaaa;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 900px;
+        }
+
+        .control-panel {
+            background: var(--card-bg);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.5);
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .now-playing {
+            text-align: center;
+        }
+
+        .now-playing h2 {
+            margin: 0;
+            font-size: 0.9rem;
+            color: var(--text-dim);
+            text-transform: uppercase;
+        }
+
+        .now-playing .sender-title {
+            font-size: 1.8rem;
+            font-weight: bold;
+            color: var(--accent-color);
+            margin-top: 5px;
+        }
+
+        .button-bar {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: #2a2a2a;
+            border: 1px solid #3d3d3d;
+            color: var(--text-color);
+            padding: 12px 20px;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+
+        button.active {
+            background: var(--accent-color);
+            border-color: var(--accent-color);
+        }
+
+        .volume-control {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            background: #181818;
+            padding: 10px 20px;
+            border-radius: 10px;
+        }
+
+        .volume-control input[type=range] {
+            flex-grow: 1;
+            accent-color: var(--accent-color);
+        }
+
+        .station-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+            gap: 15px;
+        }
+
+        .station-card {
+            background: var(--card-bg);
+            border: 2px solid transparent;
+            border-radius: 12px;
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .station-card:hover {
+            border-color: #444;
+        }
+
+        .station-card.active {
+            border-color: var(--accent-color);
+            background: #1a2a3a;
+        }
+
+        .station-card .icon {
+            font-size: 2rem;
+            margin-bottom: 8px;
+        }
+
+        .station-card .name {
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="control-panel">
+        <div class="now-playing">
+            <h2>Aktueller Sender</h2>
+            <div class="sender-title" id="current-sender">Loading...</div>
+        </div>
+
+        <div class="button-bar">
+            <button id="btn-prev">⏮ Previous</button>
+            <button id="btn-play">▶ Play</button>
+            <button id="btn-next">Next ⏭</button>
+            <button id="btn-mute">🔊 Unmute</button>
+        </div>
+
+        <div class="volume-control">
+            <span>🔉</span>
+            <input type="range" id="volume-slider" min="0" max="100" value="80">
+            <span id="volume-val">80%</span>
+        </div>
+    </div>
+
+    <div class="station-grid" id="station-grid">
+        <!-- Generated dynamically -->
+    </div>
+</div>
+
+<!-- 1. Existing Library -->
+<script src="openhab.js"></script>
+
+<!-- 2. Application Scripts -->
+<script src="config.js"></script>
+<script src="openhab-service.js"></script>
+<script src="model.js"></script>
+<script src="view.js"></script>
+<script src="controller.js"></script>
+</body>
+</html>
