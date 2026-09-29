@@ -9,26 +9,42 @@ String   WebTV_Sender   "Aktueller Sender"   <screen>
 String   WebTV_Zap      "Sender zappen"      <screen>
 
 // Channels with stream_uri metadata
-Switch iWebTV_ARD "Das Erste" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/ard.m3u8" }
-Switch iWebTV_ZDF "ZDF" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/zdf.m3u8" }
-Switch iWebTV_ZDFneo "ZDFneo" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/zdfneo.m3u8" }
-Switch iWebTV_ZDFinfo "ZDFinfo" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/zdfinfo.m3u8" }
-Switch iWebTV_Arte "Arte" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/arte.m3u8" }
-Switch iWebTV_3sat "3sat" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/3sat.m3u8" }
-Switch iWebTV_KiKa "KiKa" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/kika.m3u8" }
-Switch iWebTV_Phoenix "Phoenix" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/phoenix.m3u8" }
-Switch iWebTV_Tagesschau24 "Tagesschau24" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/tagesschau24.m3u8" }
-Switch iWebTV_One "ARD One" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/one.m3u8" }
-Switch iWebTV_Alpha "ARD Alpha" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/alpha.m3u8" }
+Switch iWebTV_ARD "Das Erste" (gWebTV) { stream_uri="https://daserste-live.ard-mcdn.de/daserste/live/hls/de/master.m3u8" }
+Switch iWebTV_ZDF "ZDF" (gWebTV) { stream_uri="http://zdf-hls-15.akamaized.net/hls/live/2016498/de/veryhigh/master.m3u8" }
+Switch iWebTV_3sat "3sat" (gWebTV) { stream_uri="https://zdf-hls-18.akamaized.net/hls/live/2016501/dach/veryhigh/master.m3u8" }
+Switch iWebTV_Alpha "ARD Alpha" (gWebTV) { stream_uri="https://mcdn.br.de/br/fs/ard_alpha/hls/de/master.m3u8" }
+Switch iWebTV_Arte "Arte" (gWebTV) { stream_uri="https://artesimulcast.akamaized.net/hls/live/2030993/artelive_de/index.m3u8" }
+Switch iWebTV_KiKa "KiKa" (gWebTV) { stream_uri="https://kikageohls.akamaized.net/hls/live/2022693/livetvkika_de/master.m3u8" }
+Switch iWebTV_One "ARD One" (gWebTV) { stream_uri="https://mcdn-one.ard.de/ardone/hls/master.m3u8" }
+Switch iWebTV_Phoenix "Phoenix" (gWebTV) { stream_uri="https://zdf-hls-19.akamaized.net/hls/live/2016502/de/veryhigh/master.m3u8" }
+Switch iWebTV_Tagesschau24 "Tagesschau24" (gWebTV) { stream_uri="https://tagesschau.akamaized.net/hls/live/2020115/tagesschau/tagesschau_1/master.m3u8" }
+Switch iWebTV_Welt "WELT" (gWebTV) { stream_uri="https://w-live2weltcms.akamaized.net/hls/live/2041019/Welt-LivePGM/index.m3u8" }
+Switch iWebTV_ZDFinfo "ZDFinfo" (gWebTV) { stream_uri="https://zdf-hls-17.akamaized.net/hls/live/2016500/de/veryhigh/master.m3u8" }
+Switch iWebTV_ZDFneo "ZDFneo" (gWebTV) { stream_uri="https://zdf-hls-16.akamaized.net/hls/live/2016499/de/veryhigh/master.m3u8" }
 
-Switch iWebTV_BR "BR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/br.m3u8" }
-Switch iWebTV_HR "HR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/hr.m3u8" }
-Switch iWebTV_MDR "MDR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/mdr.m3u8" }
-Switch iWebTV_NDR "NDR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/ndr.m3u8" }
-Switch iWebTV_RBB "RBB Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/rbb.m3u8" }
-Switch iWebTV_SWR "SWR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/swr.m3u8" }
-Switch iWebTV_WDR "WDR Fernsehen" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/wdr.m3u8" }
+// Regional / "Dritten Programme"
+Switch iWebTV_BR_Nord "BR Nord" (gWebTV) { stream_uri="https://mcdn.br.de/br/fs/bfs_nord/hls/de/master.m3u8" }
+Switch iWebTV_BR_Sued "BR Süd" (gWebTV) { stream_uri="https://mcdn.br.de/br/fs/bfs_sued/hls/de/master.m3u8" }
+Switch iWebTV_HR "HR Fernsehen" (gWebTV) { stream_uri="https://hrhls.akamaized.net/hls/live/2024525/hrhls/master.m3u8" }
+Switch iWebTV_MDR_Sachsen "MDR Sachsen" (gWebTV) { stream_uri="https://mdrtvsnhls.akamaized.net/hls/live/2016928/mdrtvsn/master.m3u8" }
+Switch iWebTV_MDR_SachsenAnhalt "MDR Sachsen-Anhalt" (gWebTV) { stream_uri="https://mdrtvsahls.akamaized.net/hls/live/2016879/mdrtvsa/master.m3u8" }
+Switch iWebTV_MDR_Thueringen "MDR Thüringen" (gWebTV) { stream_uri="https://mdrtvthhls.akamaized.net/hls/live/2016880/mdrtvth/master.m3u8" }
+Switch iWebTV_NDR_Hamburg "NDR Hamburg" (gWebTV) { stream_uri="https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_hh/master.m3u8" }
+Switch iWebTV_NDR_MV "NDR Mecklenburg-Vorpommern" (gWebTV) { stream_uri="https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_mv/master.m3u8" }
+Switch iWebTV_NDR_Niedersachsen "NDR Niedersachsen" (gWebTV) { stream_uri="https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_nds/master.m3u8" }
+Switch iWebTV_NDR_SH "NDR Schleswig-Holstein" (gWebTV) { stream_uri="https://mcdn.ndr.de/ndr/hls/ndr_fs/ndr_sh/master.m3u8" }
+Switch iWebTV_NDR_Int "NDR International" (gWebTV) { stream_uri="https://ndrint.akamaized.net/hls/live/2020766/ndr_int/index.m3u8" }
+Switch iWebTV_RadioBremen "Radio Bremen" (gWebTV) { stream_uri="https://rbhlslive.akamaized.net/hls/live/2020435/rbfs/master.m3u8" }
+Switch iWebTV_RBB_Berlin "RBB Berlin" (gWebTV) { stream_uri="https://rbb-hls-berlin.akamaized.net/hls/live/2017824/rbb_berlin/master.m3u8" }
+Switch iWebTV_RBB_Brandenburg "RBB Brandenburg" (gWebTV) { stream_uri="https://rbb-hls-brandenburg.akamaized.net/hls/live/2017825/rbb_brandenburg/master.m3u8" }
+Switch iWebTV_SR "SR Fernsehen" (gWebTV) { stream_uri="https://srfs.akamaized.net/hls/live/689649/srfsgeo/index.m3u8" }
+Switch iWebTV_SWR_BW "SWR Baden-Württemberg" (gWebTV) { stream_uri="https://swrbwd-hls.akamaized.net/hls/live/2018672/swrbwd/master.m3u8" }
+Switch iWebTV_SWR_RP "SWR Rheinland-Pfalz" (gWebTV) { stream_uri="https://swrrpd-hls.akamaized.net/hls/live/2018676/swrrpd/master.m3u8" }
+Switch iWebTV_WDR "WDR Fernsehen" (gWebTV) { stream_uri="https://wdrfs247.akamaized.net/hls/live/681509/wdr_msl4_fs247/index.m3u8" }
 
-Switch iWebTV_Welt "WELT" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/welt.m3u8" }
-Switch iWebTV_N24Doku "N24 Doku" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/n24doku.m3u8" }
-Switch iWebTV_ServusTV "ServusTV" (gWebTV) { stream_uri="https://m3u.m3u8.dev/de/servustv.m3u8" }
+// Miscellaneous
+Switch iWebTV_DeluxeMusic "DELUXE MUSIC" (gWebTV) { stream_uri="https://sdn-global-live-streaming-packager-cache.3qsdn.com/13456/13456_264_live.m3u8" }
+Switch iWebTV_DeluxeDance "DELUXE MUSIC DANCE BY KONTOR" (gWebTV) { stream_uri="https://sdn-global-live-streaming-packager-cache.3qsdn.com/64733/64733_264_live.m3u8" }
+Switch iWebTV_DeluxeRap "DELUXE MUSIC RAP" (gWebTV) { stream_uri="https://sdn-global-live-streaming-packager-cache.3qsdn.com/65183/65183_264_live.m3u8" }
+Switch iWebTV_SchlagerDeluxe "SCHLAGER DELUXE" (gWebTV) { stream_uri="https://sdn-global-live-streaming-packager-cache.3qsdn.com/26658/26658_264_live.m3u8" }
+Switch iWebTV_EuronewsDE "Euronews Deutsch" (gWebTV) { stream_uri="https://www.youtube.com/euronewsde/live" }
